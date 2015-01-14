@@ -1,12 +1,22 @@
 <script>
-var user = function() {
-	user.speed = speed
-	user.currentLoc = currentLoc;
-	user.whenStop  = whenStop;
-	user.whyStop = whyStop;
-}
+  var user = function(speed, currentLoc, whenStop, whyStop) {
+  	user.speed = speed;
+  	user.currentLoc = currentLoc;
+  	user.whenStop  = whenStop;
+  	user.whyStop = whyStop;
+  }
 
+  var trip = function(distance, time, begPoint, endPoint){
+    trip.distance = distance;
+    trip.time = time;
+    trip.begPoint = begPoint;
+    trip.endPoint = endPoint;
+  }
 
+  var PointofInterest = function(location, typeService){
+    this.location = location;
+    this.typeService = typeService;
+  }
 
 
 

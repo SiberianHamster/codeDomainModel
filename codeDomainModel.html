@@ -1,9 +1,11 @@
 <script>
-  function User(mph, currentLoc, whenStop, whyStop) {
+  function User(mph, whenStop, whyStop, checkCurrentLocation) {
   	this.mph = mph;
-  	this.currentLoc = currentLoc;
   	this.whenStop  = whenStop;
-  	this.whyStop = whyStop;
+    this.whyStop = whyStop;
+    this.checkCurrentLocation = function(){
+                                  this.mph * Trip.hours
+                                };
   }
 
   function Trip(distance, time, begPoint, endPoint){
@@ -12,11 +14,36 @@
     this.begPoint = begPoint;
     this.endPoint = endPoint;
   }
-  
+
   function PointofInterest(location, hasgas, hasfood, hasbathroom){
     this.location = location;
     this.hasgas = hasgas;
     this.hasfood = hasfood;
     this.hasbathroom = hasbathroom;
   }
+
+  var John = new User (75, 0, 5, food);
+  var Disney = new Trip (1400, 0, 0, 1400);
+  var StartigPoint = new PointofInterest(0, "n", "n", "n");
+  var EndingPoint = new PointofInterest(1400, "n" , "y", "y");
+  var Panda1 = new PointofInterest (100, "n", "y", "y");
+  var Panda2 = new PointofInterest (530, "n", "y", "y");
+  var Panda3 = new PointofInterest (600, "n", "y", "y");
+  var Panda4 = new PointofInterest (898, "n", "y", "y");
+  var Panda5 = new PointofInterest (1200, "n", "y", "y");
+  var McDonalds1 = new PointofInterest (50, "n", "y", "y");
+  var McDonalds2 = new PointofInterest (450, "n", "y", "y");
+  var McDonalds3 = new PointofInterest (850, "n", "y", "y");
+  var McDonalds4 = new PointofInterest (1050, "n", "y", "y");
+  var McDonalds5 = new PointofInterest (1350, "n", "y", "y");
+  var GasStop1 = new PointofInterest (90, "y", "y", "y");
+  var GasStop2 = new PointofInterest (590, "y", "y", "y");
+  var GasStop3 = new PointofInterest (890, "y", "y", "y");
+  var GasStop4 = new PointofInterest (1090, "y", "y", "y");
+  var GasStop5 = new PointofInterest (1300, "y", "y", "y");
+  var Starbucks1 = new PointofInterest (20, "n", "n", "y");
+  var Starbucks2 = new PointofInterest (630, "n", "n", "y");
+  var Starbucks3 = new PointofInterest (910, "n", "n", "y");
+  var Starbucks4 = new PointofInterest (1100, "n", "n", "y");
+  var Starbucks5 = new PointofInterest (1290, "n", "n", "y");
 </script>

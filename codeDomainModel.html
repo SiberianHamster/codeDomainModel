@@ -4,13 +4,13 @@
   	this.whenStop  = whenStop;
     this.whyStop = whyStop;
     this.checkCurrentLocation = function(){
-                                  this.mph * Trip.hours
+                                  this.mph * Disney.hours
                                 };
   }
 
   function Trip(distance, time, begPoint, endPoint){
     this.distance = distance;
-    this.hours = hours;
+    this.time = time;
     this.begPoint = begPoint;
     this.endPoint = endPoint;
   }
@@ -22,7 +22,7 @@
     this.hasbathroom = hasbathroom;
   }
 
-  var John = new User (75, 0, 5, food);
+  var John = new User (75, 0, 5, 'food');
   var Disney = new Trip (1400, 0, 0, 1400);
   var StartigPoint = new PointofInterest(0, "n", "n", "n");
   var EndingPoint = new PointofInterest(1400, "n" , "y", "y");

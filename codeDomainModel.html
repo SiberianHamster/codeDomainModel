@@ -1,6 +1,6 @@
 <script>
-  function User(speed, currentLoc, whenStop, whyStop) {
-  	this.speed = speed;
+  function User(mph, currentLoc, whenStop, whyStop) {
+  	this.mph = mph;
   	this.currentLoc = currentLoc;
   	this.whenStop  = whenStop;
   	this.whyStop = whyStop;
@@ -8,16 +8,15 @@
 
   function Trip(distance, time, begPoint, endPoint){
     this.distance = distance;
-    this.time = time;
+    this.hours = hours;
     this.begPoint = begPoint;
     this.endPoint = endPoint;
   }
-
-  function PointofInterest(location, typeService){
+  
+  function PointofInterest(location, hasgas, hasfood, hasbathroom){
     this.location = location;
-    this.typeService = typeService;
+    this.hasgas = hasgas;
+    this.hasfood = hasfood;
+    this.hasbathroom = hasbathroom;
   }
-
-
-
 </script>

@@ -1,23 +1,22 @@
 <script>
-  var user = function(speed, currentLoc, whenStop, whyStop) {
-  	user.speed = speed;
-  	user.currentLoc = currentLoc;
-  	user.whenStop  = whenStop;
-  	user.whyStop = whyStop;
+  function User(mph, currentLoc, whenStop, whyStop) {
+  	this.mph = mph;
+  	this.currentLoc = currentLoc;
+  	this.whenStop  = whenStop;
+  	this.whyStop = whyStop;
   }
 
-  var trip = function(distance, time, begPoint, endPoint){
-    trip.distance = distance;
-    trip.time = time;
-    trip.begPoint = begPoint;
-    trip.endPoint = endPoint;
+  function Trip(distance, time, begPoint, endPoint){
+    this.distance = distance;
+    this.hours = hours;
+    this.begPoint = begPoint;
+    this.endPoint = endPoint;
   }
-
-  var PointofInterest = function(location, typeService){
+  
+  function PointofInterest(location, hasgas, hasfood, hasbathroom){
     this.location = location;
-    this.typeService = typeService;
+    this.hasgas = hasgas;
+    this.hasfood = hasfood;
+    this.hasbathroom = hasbathroom;
   }
-
-
-
 </script>

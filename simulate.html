@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  	<link rel="stylesheet" type="text/css" src="movingForward.css"/>
     <title>Plan Your Trip!</title>
   </head>
 	<body>
@@ -9,7 +10,17 @@
 	  </p>
 	  <input type = "text" id = "currentinput" placeholder = "current location")>
 	  </input>
-	  <button id="forward_button">GO!     </button>
+
+	  <select>
+	  	<option>Disney</option>
+	  	<option selected="true">None</option>
+	  </select>
+	 <ul>
+	   <li><input type="checkbox"/>Gas</li>
+	   <li><input type="checkbox"/>Food</li>
+	   <li><input type="checkbox"/>Restrooms</li>
+	 </ul>
+	 <button id="forward_button">GO!     </button>
     <script type="text/javascript" src="codeDomainModel.js"></script>
   </body>
 </html>

@@ -42,8 +42,10 @@
       var Starbucks5 = new PointofInterest (1290, "n", "n", "y");
 
       
-      var currentlocation = document.get.getElementById("currentinput");
+      var currentlocation = document.getElementById("currentinput");
       var forwardclicked = document.getElementById("forward_button");
       forwardclicked.addEventListener('click', executeForward, false);
 
-
+      function executeForward(){
+        
+      }

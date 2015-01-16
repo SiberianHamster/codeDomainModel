@@ -40,3 +40,12 @@
       var Starbucks3 = new PointofInterest (910, "n", "n", "y");
       var Starbucks4 = new PointofInterest (1100, "n", "n", "y");
       var Starbucks5 = new PointofInterest (1290, "n", "n", "y");
+
+      
+      var currentlocation = document.getElementById("currentinput");
+      var forwardclicked = document.getElementById("forward_button");
+      forwardclicked.addEventListener('click', executeForward, false);
+
+      function executeForward(){
+        
+      }

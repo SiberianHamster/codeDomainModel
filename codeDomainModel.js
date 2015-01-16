@@ -20,32 +20,49 @@
 
       var John = new User ("currentlocation","servicewanted");
       var Disney = new Trip (1161, "goTo", "closest");
-      var Panda1 = new PointofInterest (100, "n", "y", "y");
-      var Panda2 = new PointofInterest (530, "n", "y", "y");
-      var Panda3 = new PointofInterest (600, "n", "y", "y");
-      var Panda4 = new PointofInterest (898, "n", "y", "y");
-      var Panda5 = new PointofInterest (1200, "n", "y", "y");
-      var McDonalds1 = new PointofInterest (50, "n", "y", "y");
-      var McDonalds2 = new PointofInterest (450, "n", "y", "y");
-      var McDonalds3 = new PointofInterest (850, "n", "y", "y");
-      var McDonalds4 = new PointofInterest (1050, "n", "y", "y");
-      var McDonalds5 = new PointofInterest (1350, "n", "y", "y");
-      var GasStop1 = new PointofInterest (90, "y", "y", "y");
-      var GasStop2 = new PointofInterest (590, "y", "y", "y");
-      var GasStop3 = new PointofInterest (890, "y", "y", "y");
-      var GasStop4 = new PointofInterest (1090, "y", "y", "y");
-      var GasStop5 = new PointofInterest (1300, "y", "y", "y");
-      var Starbucks1 = new PointofInterest (20, "n", "n", "y");
-      var Starbucks2 = new PointofInterest (630, "n", "n", "y");
-      var Starbucks3 = new PointofInterest (910, "n", "n", "y");
-      var Starbucks4 = new PointofInterest (1100, "n", "n", "y");
-      var Starbucks5 = new PointofInterest (1290, "n", "n", "y");
+      var Panda1 = new PointofInterest ("Panda1",100, "n", "y", "y");
+      var Panda2 = new PointofInterest ("Panda2",530, "n", "y", "y");
+      var Panda3 = new PointofInterest ("Panda3",600, "n", "y", "y");
+      var Panda4 = new PointofInterest ("Panda4",898, "n", "y", "y");
+      var Panda5 = new PointofInterest ("Panda5",1100, "n", "y", "y");
+      var McDonalds1 = new PointofInterest ("McDonalds1", 50, "n", "y", "y");
+      var McDonalds2 = new PointofInterest ("McDonalds2", 450, "n", "y", "y");
+      var McDonalds3 = new PointofInterest ("McDonalds3", 850, "n", "y", "y");
+      var McDonalds4 = new PointofInterest ("McDonalds4", 1050, "n", "y", "y");
+      var McDonalds5 = new PointofInterest ("McDonalds5", 1150, "n", "y", "y");
+      var GasStop1 = new PointofInterest ("GasStop1", 90, "y", "n", "y");
+      var GasStop2 = new PointofInterest ("GasStop2", 590, "y", "n", "y");
+      var GasStop3 = new PointofInterest ("GasStop3", 890, "y", "n", "y");
+      var GasStop4 = new PointofInterest ("GasStop4", 900, "y", "n", "y");
+      var GasStop5 = new PointofInterest ("GasStop5", 1100, "y", "n", "y");
+      var Starbucks1 = new PointofInterest ("Starbucks1", 20, "n", "n", "y");
+      var Starbucks2 = new PointofInterest ("Starbucks2", 630, "n", "n", "y");
+      var Starbucks3 = new PointofInterest ("Starbucks3", 910, "n", "n", "y");
+      var Starbucks4 = new PointofInterest ("Starbucks4", 1000, "n", "n", "y");
+      var Starbucks5 = new PointofInterest ("Starbucks5", 1110, "n", "n", "y");
 
-      
+      var wantsgas = document.getElementById("checkgas");
+      var wantsfood = document.getElementById("checkfood");
+      var wantsbathroom = document.getElementById("checkbathroom");
       var currentlocation = document.getElementById("currentinput");
       var forwardclicked = document.getElementById("forward_button");
       forwardclicked.addEventListener('click', executeForward, false);
 
-      function executeForward(){
-        
-      }
+      var poiarray = [Panda1, Panda2, Panda3, Panda4, Panda5, McDonalds1, McDonalds2, McDonalds3, McDonalds4, McDonalds5, GasStop1, GasStop2, GasStop3, GasStop4, GasStop5, Starbucks1, Starbucks2, Starbucks3, Starbucks4, Starbucks5];
+      
+
+
+//below needs work//
+
+      console.log(poiarray[0].);
+
+
+      function executeForward(){}
+
+        // if (wantsgas.checked==true && .hasgas){}
+
+
+
+
+// console.log (wantsgas.checked)
+      // poiarray.push();

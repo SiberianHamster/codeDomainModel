@@ -1,7 +1,9 @@
 
       function User(currentlocation,servicewanted) {
         this.currentlocation = currentlocation;
-        this.servicewanted = servicewanted;
+        this.wantsgas = wantsgas;
+        this.wantsfood = wantsfood;
+        this.wantsbathroom = wantsbathroom;
       }
 
       function Trip(totalmiles, goTo, closest){
@@ -41,25 +43,40 @@
       var Starbucks4 = new PointofInterest ("Starbucks4", 1000, "n", "n", "y");
       var Starbucks5 = new PointofInterest ("Starbucks5", 1110, "n", "n", "y");
 
+      var options = ["wantsgas", "wantsfood"] // fill in the rest of this
+      // put all of these in an object called preferences. use
+      // these variable names as the property names in the object
       var wantsgas = document.getElementById("checkgas");
       var wantsfood = document.getElementById("checkfood");
       var wantsbathroom = document.getElementById("checkbathroom");
       var currentlocation = document.getElementById("currentinput");
       var forwardclicked = document.getElementById("forward_button");
+
+      function whatDoesntMatch(location) {
+        // cycle through options, check if the location matches
+        // preferences[option]. add the name of the option if they
+        // don't match to a new array. return the new array
+      }
       forwardclicked.addEventListener('click', executeForward, false);
 
       var poiarray = [Panda1, Panda2, Panda3, Panda4, Panda5, McDonalds1, McDonalds2, McDonalds3, McDonalds4, McDonalds5, GasStop1, GasStop2, GasStop3, GasStop4, GasStop5, Starbucks1, Starbucks2, Starbucks3, Starbucks4, Starbucks5];
-      
+    
 
 
 //below needs work//
+        if (whatDoesntMatch.length === 0){console.log("ALL Yes")
+        } else console.log("you need two locations");  
+        if (poiarray[0].hasGas.checked==wantsgas && poiarray[0].hasFood.checked==wantsfood && poiarray[0].hasBathroom.checked==wantsbathroom){console.log("Yes this is the location")
+        } else console.log("you need two locations"); 
 
-      console.log(poiarray[0].);
+
+
+      console.log(poiarray[0].poiLocation);
 
 
       function executeForward(){}
 
-        // if (wantsgas.checked==true && .hasgas){}
+
 
 
 

@@ -1,12 +1,12 @@
 
 a:hover {
-  color: #00F625;
-}
-a:visited {
-  color: #140100;
+  color:#F87F0A;
 }
 a:link {
-  color: #003BBF;
+  color:#00F625 ;
+}
+nav {
+  color: black;
 }
 h1 {
   font-family: Purisa;
@@ -14,9 +14,10 @@ h1 {
   color:  #00F625;
 }
 html {
-  background-image: url(/home/ewpaige/codeDomainModel/roadTrip.jpg);
+  background-image: url(roadTrip.jpg);
   font: Ubuntu Medium;
   font-weight: bolder;
+  width: 100%;
 }
 h1 {
   text-align: center;

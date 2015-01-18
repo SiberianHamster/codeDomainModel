@@ -27,11 +27,11 @@
 
       var john = new User (currentlocation, wantsgas, wantsfood, wantsbathroom);
       var disney = new Trip (1161, "goTo", "closest");
-      var Panda1 = new PointofInterest ("Panda1",100, "false", "true", "true");
-      var Panda2 = new PointofInterest ("Panda2",530, "false", "true", "true");
-      var Panda3 = new PointofInterest ("Panda3",600, "false", "true", "true");
-      var Panda4 = new PointofInterest ("Panda4",898, "false", "true", "true");
-      var Panda5 = new PointofInterest ("Panda5",1100, "false", "true", "true");
+      var Panda1 = new PointofInterest ("Panda1", 100, "false", "true", "true");
+      var Panda2 = new PointofInterest ("Panda2", 530, "false", "true", "true");
+      var Panda3 = new PointofInterest ("Panda3", 600, "false", "true", "true");
+      var Panda4 = new PointofInterest ("Panda4", 898, "false", "true", "true");
+      var Panda5 = new PointofInterest ("Panda5", 1100, "false", "true", "true");
       var McDonalds1 = new PointofInterest ("McDonalds1", 50, "false", "true", "true");
       var McDonalds2 = new PointofInterest ("McDonalds2", 450, "false", "true", "true");
       var McDonalds3 = new PointofInterest ("McDonalds3", 850, "false", "true", "true");
@@ -73,61 +73,30 @@
             i--;
           }
         }
-        console.log(poiarray.length);
       };
 
       function executeAnswer(){
-        var nextclose = 1;
-        var nearest = disney.totalmiles;       
+        var nextneareststoreName = "none";
+        var neareststoreName = "none";
+        var nearest = disney.totalmiles;
+        }       
         for (var i = 0; i < poiarray.length; i++){
-          if(poiarray[i].poiLocation < nearest){
-            nearest = poiarray[i].poiLocation;
-          }
-          if(nearest > currentlocation){
-            nextclose = nearest;
+          if(Math.abs(poiarray[i].poiLocation - Number(john.currentlocation.value)) < nearest){
+            nearest = (Math.abs(poiarray[i].poiLocation - Number(john.currentlocation.value)));
+            neareststoreName = poiarray[i].storeName;
           }
         }
-        var answers = [nextclose, nearest];
-        console.log(answers[0], answers[1]);
-
+        //not working correctly yet --->
+        for (var i = 0; i < poiarray.length; i++){
+          if(((poiarray[i].poiLocation - Number(john.currentlocation.value)) < nearest) && ((poiarray[i].poiLocation - Number(john.currentlocation.value))>0)){
+            nextneareststoreName = poiarray[i].storeName;
+          }
+        }//<---
+        console.log (neareststoreName);
+        console.log (nextneareststoreName);//<---- Not working correctly yet
       }
 
       function executeStart(){
         executeForward();
         executeAnswer();
       }
-
-
-//     var array2 = [
-//     new PointofInterest ("Panda1",100, "n", "y", "y"),
-//     ]
-
-//       var options = ["wantsgas", "wantsfood"] // fill in the rest of this
-//       // put all of these in an object called preferences. use
-//       // these variable names as the property names in the object
-
-// //below needs work//
-//       //   if (whatDoesntMatch.length === 0){console.log("ALL Yes")
-//       //   } else console.log("you need two locations");  
-//       //   if (poiarray[0].hasGas.checked==wantsgas && poiarray[0].hasFood.checked==wantsfood && poiarray[0].hasBathroom.checked==wantsbathroom){console.log("Yes this is the location")
-//       //   } else console.log("you need two locations"); 
-
-
-
-//       // console.log(poiarray[0].poiLocation);
-
-
-//       // function executeForward(){}
-
-
-// // console.log (wantsgas.checked)
-//       // poiarray.push();
-
-      // function preferences(){
-      // }
-
-      // function whatDoesntMatch(location) {
-      //   // cycle through options, check if the location matches
-      //   // preferences[option]. add the name of the option if they
-      //   // don't match to a new array. return the new array
-      // }

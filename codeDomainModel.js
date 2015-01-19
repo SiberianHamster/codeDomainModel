@@ -3,6 +3,7 @@
         var wantsbathroom = document.getElementById("checkbathroom");
         var currentlocation = document.getElementById("currentinput");
         var forwardclicked = document.getElementById("forward_button");
+        var outputarea = document.getElementById("outputarea");
 
       function User(currentlocation, wantsgas, wantsfood, wantsbathroom) {
         this.currentlocation = currentlocation;
@@ -84,6 +85,7 @@
           if(Math.abs(poiarray[i].poiLocation - Number(john.currentlocation.value)) < nearest){
             nearest = (Math.abs(poiarray[i].poiLocation - Number(john.currentlocation.value)));
             neareststoreName = poiarray[i].storeName;
+            var nearestdistance = nearest;
           }
         }
         nearest = disney.totalmiles;
@@ -91,10 +93,11 @@
           if(((poiarray[i].poiLocation - Number(john.currentlocation.value)) < nearest) && ((poiarray[i].poiLocation - Number(john.currentlocation.value))>0)){
             nextneareststoreName = poiarray[i].storeName;
             nearest = (poiarray[i].poiLocation - Number(john.currentlocation.value));
+            var nextnearestdistance = nearest;
           }
         }
-        console.log (neareststoreName);
-        console.log (nextneareststoreName);
+
+        outputarea.innerHTML = "The nearest location is " + nearestdistance + " miles away at " + neareststoreName + ".<br> The next nearest location is " + nextnearestdistance + " miles away at " + nextneareststoreName + "."
       }
 
       function executeStart(){

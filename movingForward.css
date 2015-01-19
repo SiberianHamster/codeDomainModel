@@ -41,10 +41,10 @@ p {
   font-weight: bolder;
   text-align: center;
 }
-table {
+section {
   border: dotted;
   width: 200px;
-  height:100px;
+
   background-color: white;
   color: #00F625;
   position: relative;left: 41.30%;

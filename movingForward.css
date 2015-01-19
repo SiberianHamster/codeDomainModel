@@ -1,12 +1,15 @@
-
+a:link {
+  color:#00F625;
+  font-weight: Purisa;
+}
 a:hover {
   color:#F87F0A;
 }
-a:link {
-  color:#00F625 ;
+a:visited {
+  color: red;
 }
 nav {
-  color: black;
+  color: :#00F625;
 }
 h1 {
   font-family: Purisa;
@@ -15,10 +18,10 @@ h1 {
 }
 html {
   background-image: url(roadTrip.jpg);
-  font: Ubuntu Medium;
+  font: Purisa;
   font-weight: bolder;
   width: 100%;
-}
+ }
 h1 {
   text-align: center;
   font-size: 50px;
@@ -34,6 +37,16 @@ p {
   font-style: oblique;
   font-weight: bolder;
   text-align: center;
+}
+table {
+  border: dotted;
+  width: 200px;
+  height:100px;
+  background-color: white;
+  color: #00F625;
+  position: relative;left: 41.30%;
+  padding: 10px;
+  margin: 10px;
 }
 #forward_button {
   background-color: #00F625;

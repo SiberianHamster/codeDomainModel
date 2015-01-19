@@ -37,9 +37,6 @@ p {
   font-style: oblique;
   font-weight: bolder;
   text-align: center;
-  color:#000000 ;
-  font-size: 25px;
-  opacity: 1.5;
 }
 section {
   border: dotted;
@@ -63,10 +60,17 @@ div {
 .ContrastBox {
   background-color: #00F625;
   opacity: 0.5;
+  border:double;
+  border-color: #000000 ;
 }
 #checkgas {
   position: relative;right: 27px;
 }
 #checkfood {
   position: relative;right: 22px;
+}
+.textNbox {
+  color:#000000 ;
+  font-size: 25px;
+  font-weight: bolder;
 }

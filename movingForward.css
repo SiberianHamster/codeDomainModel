@@ -37,8 +37,9 @@ p {
   font-style: oblique;
   font-weight: bolder;
   text-align: center;
-  color: #F87F09;
+  color:#000000 ;
   font-size: 25px;
+  opacity: 1.5;
 }
 section {
   border: dotted;
@@ -58,6 +59,10 @@ section {
 } 
 div {
   height: 150px;
+}
+.ContrastBox {
+  background-color: #00F625;
+  opacity: 0.5;
 }
 #checkgas {
   position: relative;right: 27px;

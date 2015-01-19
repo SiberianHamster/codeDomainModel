@@ -101,6 +101,7 @@
           }
         }
 
+
         outputarea.innerHTML = "The nearest location is " + nearestdistance + " miles away at " + neareststoreName + ".<br> The next nearest location is " + nextnearestdistance + " miles away at " + nextneareststoreName + "."
       }
 

@@ -8,9 +8,6 @@ a:hover {
 a:visited {
   color: red;
 }
-nav {
-  color: :#00F625;
-}
 h1 {
   font-family: Purisa;
   font-size: 30px;
@@ -33,6 +30,7 @@ h1 {
   font-weight: bold;
 }
 body {
+  background-image: url(roadTrip.jpg);
   font-size: 20px;
   text-align: center;
 }

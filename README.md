@@ -1,3 +1,10 @@
 # codeDomainModel
 
-For the "code domain model" project, Mark and I chose to use his idea. The goal was to model a trip calculator that, with given information from the user, gives results that fit the criteria for what the user is looking for. The calculator is limited to a single destination at the moment, but in a real life situation GPS technology would be utilized to give the user unlimited possibilities. On the simulation page, a dropdown box for the destination is present with the "disney" option. The simulator also needs the current location from the user, which is given number form and the types of stops they want to make(ie.food, gas, and restroom). For the simulation, the trip is always on a linear path, with numbers representing different locations along the path. The calculator takes the user's information and and generates an aswer which is displayed in a box on the page. 
+For the domain model project, we chose to model a trip calculator.
+
+On the simulation page, a dropdown box for the destination is present with a drop down option. The simulator also needs the current location from the user in the form of an interger marking miles he has traveled so far to his destination.  The user will also need to choose any number of combination of points of interests (ie.food, gas, and restroom).
+
+The calculator is limited to a single destination at the moment, but in a real life situation any destination should be possible.  The simulation is also calculating on a linear path and the points of interests are all located on the same path.  In real life, we would be dealing with points off the main path that are close but not on it.
+
+UML class diagram:
+![uml picture](https://www.dropbox.com/s/qnut3owaerlx5x9/20150115_154745.jpg?dl=0)

@@ -4,6 +4,7 @@
         var currentlocation = document.getElementById("currentinput");
         var forwardclicked = document.getElementById("forward_button");
         var outputarea = document.getElementById("outputarea");
+        var dropdown = document.getElementById("dropdown");
 
       function User(currentlocation, wantsgas, wantsfood, wantsbathroom) {
         this.currentlocation = currentlocation;
@@ -12,10 +13,8 @@
         this.wantsbathroom = wantsbathroom;
       }
 
-      function Trip(totalmiles, goTo, closest){
+      function Trip(totalmiles){
         this.totalmiles = totalmiles;
-        this.goTo = goTo;
-        this.closest = closest;
       }
 
       function PointofInterest(storeName, poiLocation, hasGas, hasFood, hasBathroom){
@@ -27,7 +26,7 @@
       }
 
       var john = new User (currentlocation, wantsgas, wantsfood, wantsbathroom);
-      var disney = new Trip (1161, "goTo", "closest");
+      var disney = new Trip (1161);
       var Panda1 = new PointofInterest ("Panda1", 100, "false", "true", "true");
       var Panda2 = new PointofInterest ("Panda2", 530, "false", "true", "true");
       var Panda3 = new PointofInterest ("Panda3", 600, "false", "true", "true");
@@ -101,6 +100,10 @@
       }
 
       function executeStart(){
+        if ((dropdown.value != "None") && ((john.currentlocation.value <= disney.totalmiles) && (john.currentlocation.value>0)) &&   ((wantsgas.checked == true) || (wantsbathroom.checked == true) || (wantsfood.checked == true))){
+        console.log (dropdown.value)
         executeForward();
         executeAnswer();
+        }
+        else outputarea.innerHTML = "Please select a destination location, a valid distance that is not greater than the destination and at least one point of interest checked.";
       }

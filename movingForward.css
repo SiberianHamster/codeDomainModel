@@ -30,7 +30,6 @@ h1 {
   font-weight: bold;
 }
 body {
-  background-image: url(roadTrip.jpg);
   font-size: 20px;
   text-align: center;
 }
@@ -38,11 +37,12 @@ p {
   font-style: oblique;
   font-weight: bolder;
   text-align: center;
+  color: #F87F09;
+  font-size: 25px;
 }
 section {
   border: dotted;
   width: 200px;
-
   background-color: white;
   color: #00F625;
   position: relative;left: 41.30%;

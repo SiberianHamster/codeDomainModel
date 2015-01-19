@@ -79,21 +79,22 @@
         var nextneareststoreName = "none";
         var neareststoreName = "none";
         var nearest = disney.totalmiles;
-        }       
+               
         for (var i = 0; i < poiarray.length; i++){
           if(Math.abs(poiarray[i].poiLocation - Number(john.currentlocation.value)) < nearest){
             nearest = (Math.abs(poiarray[i].poiLocation - Number(john.currentlocation.value)));
             neareststoreName = poiarray[i].storeName;
           }
         }
-        //not working correctly yet --->
+        nearest = disney.totalmiles;
         for (var i = 0; i < poiarray.length; i++){
           if(((poiarray[i].poiLocation - Number(john.currentlocation.value)) < nearest) && ((poiarray[i].poiLocation - Number(john.currentlocation.value))>0)){
             nextneareststoreName = poiarray[i].storeName;
+            nearest = (poiarray[i].poiLocation - Number(john.currentlocation.value));
           }
-        }//<---
+        }
         console.log (neareststoreName);
-        console.log (nextneareststoreName);//<---- Not working correctly yet
+        console.log (nextneareststoreName);
       }
 
       function executeStart(){

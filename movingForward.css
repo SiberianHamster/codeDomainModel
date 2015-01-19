@@ -18,6 +18,9 @@ h1 {
 }
 html {
   background-image: url(roadTrip.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   font: Purisa;
   font-weight: bolder;
   width: 100%;

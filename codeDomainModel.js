@@ -3,6 +3,8 @@
         var wantsbathroom = document.getElementById("checkbathroom");
         var currentlocation = document.getElementById("currentinput");
         var forwardclicked = document.getElementById("forward_button");
+        var outputarea = document.getElementById("outputarea");
+        var dropdown = document.getElementById("dropdown");
 
       function User(currentlocation, wantsgas, wantsfood, wantsbathroom) {
         this.currentlocation = currentlocation;
@@ -11,10 +13,8 @@
         this.wantsbathroom = wantsbathroom;
       }
 
-      function Trip(totalmiles, goTo, closest){
+      function Trip(totalmiles){
         this.totalmiles = totalmiles;
-        this.goTo = goTo;
-        this.closest = closest;
       }
 
       function PointofInterest(storeName, poiLocation, hasGas, hasFood, hasBathroom){
@@ -26,7 +26,12 @@
       }
 
       var john = new User (currentlocation, wantsgas, wantsfood, wantsbathroom);
-      var disney = new Trip (1161, "goTo", "closest");
+      var disney = new Trip (1161);
+      var Costco1 = new PointofInterest ("Costco1", 14, "true", "true", "true");
+      var Costco2 = new PointofInterest ("Costco2", 234, "true", "true", "true");
+      var Costco3 = new PointofInterest ("Costco3", 342, "true", "true", "true");
+      var Costco4 = new PointofInterest ("Costco4", 457, "true", "true", "true");
+      var Costco5 = new PointofInterest ("Costco5", 1021, "true", "true", "true");
       var Panda1 = new PointofInterest ("Panda1", 100, "false", "true", "true");
       var Panda2 = new PointofInterest ("Panda2", 530, "false", "true", "true");
       var Panda3 = new PointofInterest ("Panda3", 600, "false", "true", "true");
@@ -48,7 +53,7 @@
       var Starbucks4 = new PointofInterest ("Starbucks4", 1000, "false", "false", "true");
       var Starbucks5 = new PointofInterest ("Starbucks5", 1110, "false", "false", "true");
 
-      var poiarray = [Panda1, Panda2, Panda3, Panda4, Panda5, McDonalds1, McDonalds2, McDonalds3, McDonalds4, McDonalds5, GasStop1, GasStop2, GasStop3, GasStop4, GasStop5, Starbucks1, Starbucks2, Starbucks3, Starbucks4, Starbucks5];
+      var poiarray = [Costco1, Costco2, Costco3, Costco4, Costco5, Panda1, Panda2, Panda3, Panda4, Panda5, McDonalds1, McDonalds2, McDonalds3, McDonalds4, McDonalds5, GasStop1, GasStop2, GasStop3, GasStop4, GasStop5, Starbucks1, Starbucks2, Starbucks3, Starbucks4, Starbucks5];
       
 
       forwardclicked.addEventListener('click', executeStart, false);
@@ -84,6 +89,7 @@
           if(Math.abs(poiarray[i].poiLocation - Number(john.currentlocation.value)) < nearest){
             nearest = (Math.abs(poiarray[i].poiLocation - Number(john.currentlocation.value)));
             neareststoreName = poiarray[i].storeName;
+            var nearestdistance = nearest;
           }
         }
         nearest = disney.totalmiles;
@@ -91,13 +97,17 @@
           if(((poiarray[i].poiLocation - Number(john.currentlocation.value)) < nearest) && ((poiarray[i].poiLocation - Number(john.currentlocation.value))>0)){
             nextneareststoreName = poiarray[i].storeName;
             nearest = (poiarray[i].poiLocation - Number(john.currentlocation.value));
+            var nextnearestdistance = nearest;
           }
         }
-        console.log (neareststoreName);
-        console.log (nextneareststoreName);
+
+        outputarea.innerHTML = "The nearest location is " + nearestdistance + " miles away at " + neareststoreName + ".<br> The next nearest location is " + nextnearestdistance + " miles away at " + nextneareststoreName + "."
       }
 
       function executeStart(){
+        if ((dropdown.value != "None") && ((john.currentlocation.value <= disney.totalmiles) && (john.currentlocation.value>0)) && ((wantsgas.checked == true) || (wantsbathroom.checked == true) || (wantsfood.checked == true))){
         executeForward();
         executeAnswer();
+        }
+        else outputarea.innerHTML = "Please select a destination location, a valid distance that is not greater than the destination and at least one point of interest checked.";
       }

@@ -8,19 +8,18 @@ a:hover {
 a:visited {
   color: red;
 }
-nav {
-  color: :#00F625;
-}
 h1 {
   font-family: Purisa;
   font-size: 30px;
   color:  #00F625;
 }
 html {
-  background-image: url(roadTrip.jpg);
   font: Purisa;
   font-weight: bolder;
   width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
  }
 h1 {
   text-align: center;
@@ -30,6 +29,7 @@ h1 {
   font-weight: bold;
 }
 body {
+  background-image: url(roadTrip.jpg);
   font-size: 20px;
   text-align: center;
 }

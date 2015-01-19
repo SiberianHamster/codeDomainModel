@@ -47,7 +47,11 @@
       var Starbucks3 = new PointofInterest ("Starbucks3", 910, "false", "false", "true");
       var Starbucks4 = new PointofInterest ("Starbucks4", 1000, "false", "false", "true");
       var Starbucks5 = new PointofInterest ("Starbucks5", 1110, "false", "false", "true");
-
+      var Costco1 = new PointofInterest ("Costco1", 60, "true", "true", "true");
+      var Costco2 = new PointofInterest ("Costco2", 85, "true", "true", "true");
+      var Costco3 = new PointofInterest ("Costco3", 570, "true", "true", "true");
+      var Costco4 = new PointofInterest ("Costco4", 820, "true", "true", "true");
+      var Costco5 = new PointofInterest ("Costco5", 975, "true", "true", "true");
       var poiarray = [Panda1, Panda2, Panda3, Panda4, Panda5, McDonalds1, McDonalds2, McDonalds3, McDonalds4, McDonalds5, GasStop1, GasStop2, GasStop3, GasStop4, GasStop5, Starbucks1, Starbucks2, Starbucks3, Starbucks4, Starbucks5];
       
 
@@ -93,6 +97,7 @@
             nearest = (poiarray[i].poiLocation - Number(john.currentlocation.value));
           }
         }
+        document.getElementById('neareststoreName');
         console.log (neareststoreName);
         console.log (nextneareststoreName);
       }

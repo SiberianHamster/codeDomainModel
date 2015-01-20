@@ -60,12 +60,12 @@
   forwardclicked.addEventListener('click', ExecuteStart, false);
 
   function ExecuteStart(){
-    if ((dropdown.value != "None") && 
-       ((john.currentlocation.value <= disney.totalmiles) && 
-         (john.currentlocation.value>0)) && 
-       ((wantsgas.checked == true) || (wantsbathroom.checked == true) || (wantsfood.checked == true))){  
-    NarrowInterestedLocation();
-    ExecuteAnswer();
+    if((dropdown.value != "None") && 
+      ((john.currentlocation.value <= disney.totalmiles) && 
+      (john.currentlocation.value>0)) && 
+      ((wantsgas.checked == true) || (wantsbathroom.checked == true) || (wantsfood.checked == true))){  
+      NarrowInterestedLocation();
+      ExecuteAnswer();
     }
     else outputarea.innerHTML = "Please select a destination location, a valid distance that is not greater than the destination and at least one point of interest checked.";
   }
@@ -99,18 +99,21 @@
              
       for (var i = 0; i < poiarray.length; i++){
         if(Math.abs(poiarray[i].poiLocation - Number(john.currentlocation.value)) < nearest){
-          nearest = (Math.abs(poiarray[i].poiLocation - Number(john.currentlocation.value)));
-          neareststoreName = poiarray[i].storeName;
-          var nearestdistance = nearest;
+            nearest = (Math.abs(poiarray[i].poiLocation - Number(john.currentlocation.value)));
+            neareststoreName = poiarray[i].storeName;
+            var nearestdistance = nearest;
         }
       }
+
       nearest = disney.totalmiles;
       for (var i = 0; i < poiarray.length; i++){
-        if(((poiarray[i].poiLocation - Number(john.currentlocation.value)) < nearest) && ((poiarray[i].poiLocation - Number(john.currentlocation.value))>0)){
-          nextneareststoreName = poiarray[i].storeName;
-          nearest = (poiarray[i].poiLocation - Number(john.currentlocation.value));
-          var nextnearestdistance = nearest;
+        if(((poiarray[i].poiLocation - Number(john.currentlocation.value)) < nearest) &&
+          ((poiarray[i].poiLocation - Number(john.currentlocation.value))>0)){
+            nextneareststoreName = poiarray[i].storeName;
+            nearest = (poiarray[i].poiLocation - Number(john.currentlocation.value));
+            var nextnearestdistance = nearest;
         }
       }
+
       outputarea.innerHTML = "The nearest location is " + nearestdistance + " miles away at " + neareststoreName + ".<br> The next nearest location is " + nextnearestdistance + " miles away at " + nextneareststoreName + "."
     }

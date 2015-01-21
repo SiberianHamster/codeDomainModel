@@ -1,16 +1,9 @@
-  var wantsgas = document.getElementById("checkgas");
-  var wantsfood = document.getElementById("checkfood");
-  var wantsbathroom = document.getElementById("checkbathroom");
-  var currentlocation = document.getElementById("currentinput");
-  var forwardclicked = document.getElementById("forward_button");
-  var outputarea = document.getElementById("outputarea");
-  var dropdown = document.getElementById("dropdown");
-
   function User(currentlocation, wantsgas, wantsfood, wantsbathroom) {
-    this.currentlocation = currentlocation;
-    this.wantsgas = wantsgas;
-    this.wantsfood = wantsfood;
-    this.wantsbathroom = wantsbathroom;
+    this.currentlocation = $("#currentinput");
+    this.wantsgas = $("#checkgas");
+    this.wantsfood = $("#checkfood");
+    this.wantsbathroom = $("#checkbathroom");
+    this.dropdown = $("#dropdown");
   }
 
   function Trip(totalmiles){
@@ -25,7 +18,7 @@
     this.hasBathroom = hasBathroom;
   }
 
-  var john = new User (currentlocation, wantsgas, wantsfood, wantsbathroom);
+  var john = new User ($("#currentinput"), $("#checkgas"), $("#checkfood"), $("#checkbathroom"));
   var disney = new Trip (1161);
   var Costco1 = new PointofInterest ("Costco1", 14, "true", "true", "true");
   var Costco2 = new PointofInterest ("Costco2", 234, "true", "true", "true");
@@ -56,8 +49,9 @@
 
   var poiarray = [Costco1, Costco2, Costco3, Costco4, Costco5, Panda1, Panda2, Panda3, Panda4, Panda5, McDonalds1, McDonalds2, McDonalds3, McDonalds4, McDonalds5, GasStop1, GasStop2, GasStop3, GasStop4, GasStop5, Starbucks1, Starbucks2, Starbucks3, Starbucks4, Starbucks5];
 
-
-  forwardclicked.addEventListener('click', ExecuteStart, false);
+  $("#forward_button").click(function(){
+      ExecuteStart()
+   });
 
   function ExecuteStart(){
     if ((dropdown.value != "None") && 
@@ -67,8 +61,9 @@
     NarrowInterestedLocation();
     ExecuteAnswer();
     }
-    else outputarea.innerHTML = "Please select a destination location, a valid distance that is not greater than the destination and at least one point of interest checked.";
-  }
+    else var tryAgain = "Please select a destination location, a valid distance that is not greater than the destination and at least one point of interest checked.";
+    $("#outputarea").text(tryAgain);
+}
 
 
     function NarrowInterestedLocation(){
@@ -112,5 +107,6 @@
           var nextnearestdistance = nearest;
         }
       }
-      outputarea.innerHTML = "The nearest location is " + nearestdistance + " miles away at " + neareststoreName + ".<br> The next nearest location is " + nextnearestdistance + " miles away at " + nextneareststoreName + "."
+      var answerMe = "The nearest location is " + nearestdistance + " miles away at " + neareststoreName + ". The next nearest location is " + nextnearestdistance + " miles away at " + nextneareststoreName + ".";
+      $("#outputarea").text(amswerMe);
     }

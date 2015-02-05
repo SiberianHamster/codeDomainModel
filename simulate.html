@@ -3,6 +3,7 @@
   <head>
     <link href="movingForward.css" rel="stylesheet" type="text/css">
     <title>Plan Your Trip!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
   </head>
   <body>
     <h1>Moving Forward!</h1>
@@ -13,19 +14,19 @@
         When you're finished, hit the go button to see all your options in the right direction!
       </p>
     </div>
-    <input type = "text" id = "currentinput" placeholder = "current location")>
+    <input type = "text" id = "currentinput" class = "userEntry" placeholder = "current location")>
     </input>
-    <select id="dropdown">
+    <select id="dropdown" class = "userEntry">
       <option>Disney</option>
       <option selected="true">None</option>
     </select>
-   <ul>
-     <li><input type="checkbox" id="checkgas"/>Gas</li>
-     <li><input type="checkbox" id="checkfood"/>Food</li>
-     <li><input type="checkbox"id="checkbathroom"/>Restrooms</li>
-   </ul>
-   <button id="forward_button">GO!</button>
-   <section id="outputarea"></section>
+    <ul>
+     <li><input type="checkbox" id="checkgas" class = "userEntry"/>Gas</li>
+     <li><input type="checkbox" id="checkfood" class = "userEntry"/>Food</li>
+     <li><input type="checkbox"id="checkbathroom" class = "userEntry"/>Restrooms</li>
+    </ul>
+    <button id="forward_button">GO!</button>
+    <section id="outputarea"></section>
     <nav>
       <a href="about.html">About Us</a></br>
       <a href="index.html">Home</a>
